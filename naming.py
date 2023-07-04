@@ -1,9 +1,11 @@
 import os
+def make_py(folder):
+    os.chdir(f'/home/conrad/neetcode-150-solutions/{folder}')
 
-os.chdir('/home/conrad/neetcode-150-solutions/arrays_&_hashing')
+    question_name = input("Input the name of the question: ")
+    question_name = question_name.lower().replace('.', '').replace(' ', '_') + '.py'
 
-question_name = input("Input the name of the question: ")
-question_name = question_name.lower().replace('.', '').replace(' ', '_') + '.py'
+    f = open(question_name, 'w')
+    f.close()
 
-f = open(question_name, 'w')
-f.close()
+make_py('two_pointers')
